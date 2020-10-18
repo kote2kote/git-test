@@ -1,0 +1,9 @@
+dist
+store
+plugins
+pages
+mixins
+components
+nuxt.config.js
+package-lock.json
+package.json

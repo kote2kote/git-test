@@ -1,0 +1,8 @@
+# https://stylelint.io/user-guide/ignore-code
+dist/*
+package-lock.json
+package.json
+layouts/default.vue
+pages/index.vue
+static/*
+assets/css/tailwind.css

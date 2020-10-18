@@ -1,0 +1,56 @@
+/* == font size ======================= */
+$sg-font-size-default: 16;
+$sg-font-size-ratio: 1; // or 0.0625
+$sg-font-size-ratio-per: percentage($sg-font-size-ratio); // 62.5%
+$sg-font-size-computed: (
+  $sg-font-size-default * $sg-font-size-ratio * 100 / 100
+); // 16px = 1.6rem
+
+.cm50 {
+  box-sizing: border-box;
+  min-height: 50 / $sg-font-size-computed + rem;
+  border: solid 2px #a9a9a9;
+  background:
+    repeating-linear-gradient(
+      -45deg,
+      rgba(68, 68, 68, 0.4),
+      rgba(68, 68, 68, 0.4) 10px,
+      rgba(136, 136, 136, 0.4) 0,
+      rgba(136, 136, 136, 0.4) 20px
+    );
+}
+
+$every: 100;
+
+@for $i from 0 through 10 {
+  .cm#{$i * $every} {
+    box-sizing: border-box;
+    min-height: $i * $every / $sg-font-size-computed + rem;
+    border: solid 2px rgba(68, 68, 68, 0.4);
+    background:
+      repeating-linear-gradient(
+        -45deg,
+        rgba(68, 68, 68, 0.4),
+        rgba(68, 68, 68, 0.4) 10px,
+        rgba(136, 136, 136, 0.4) 0,
+        rgba(136, 136, 136, 0.4) 20px
+      );
+  }
+}
+
+.cm {
+  box-sizing: border-box;
+  border: solid 1px rgba(68, 68, 68, 0.4);
+  background:
+    repeating-linear-gradient(
+      45deg,
+      rgba(68, 68, 68, 0.4),
+      rgba(68, 68, 68, 0.4) 5px,
+      rgba(136, 136, 136, 0.4) 0,
+      rgba(136, 136, 136, 0.4) 10px
+    );
+}
+
+body {
+  color: #505050;
+}

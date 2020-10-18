@@ -1,0 +1,12 @@
+.tw-pre-inner {
+  @apply mb-4 p-4 bg-gray-300 border border-gray-200 rounded;
+}
+.tw-pre {
+  @apply bg-blue-900 text-white font-semibold;
+}
+.max-h {
+  max-height: 70vh;
+}
+:not(pre) > code[class*="language-"], pre[class*="language-"] {
+    @apply bg-blue-900;
+}
